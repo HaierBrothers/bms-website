@@ -1,0 +1,86 @@
+.logo_box li{
+	width: 10%;
+	float: left;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.logo_box li p{
+	line-height: 38px;
+	font-size: 14px;
+}
+
+.logo_box li img{
+	width: 74px;
+}
+
+.shadeBg {
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 5; 
+	display:none;
+	background:#000;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+
+* html .shadeBg {
+	position: absolute;
+	height: expression_r(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+.remind{
+	width: 700px;
+	max-height: 650px;
+    overflow-y: auto;
+	top: 50px;
+	padding:0 5% 50px; 
+	background:#fff;
+	color: #000;
+	display:none;
+	position:fixed; 
+	z-index:10;
+	left: 50%;
+	margin-left:-400px;
+}
+
+.remind > img{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+}
+
+.remind .title{
+	text-align: center;
+	padding: 100px 0 10px;
+	border-bottom:1px solid #000;
+}
+
+.remind .title h4{
+	font-size: 36px;
+	line-height: 60px;
+}
+
+.remind .title img{
+	width: 74px;
+}
+
+.remind h5{
+	font-size: 22px;
+	margin-top: 30px;
+}
+
+.remind p{
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.remind h5 a{
+	color: #000;
+	text-decoration: underline;
+}
+

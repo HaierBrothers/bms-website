@@ -1,0 +1,171 @@
+@charset "utf-8";
+ 
+/* html,body */
+html {-webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight:rgba(0,0,0,0);-webkit-text-size-adjust:none;}
+body {font-size:12px;font-family: "helvetica neue","\5fae\8f6f\96c5\9ed1", arial, sans-serif;}
+label {cursor:pointer}
+a:link, a:visited { text-decoration:none;color: #fff;}
+input,button,select,textarea{outline:none} textarea{resize:none;}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, menu, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt,
+u, ul, var { margin:0; padding:0}
+
+article, aside, footer, header, hgroup, nav, section, figure, figcaption { display: block} 
+
+h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub{ font-weight:normal;font-size:12px;}
+em, cite, address, optgroup { font-style:normal}
+kbd, samp, code { font-family:monospace}
+
+img, input, button, select, textarea { vertical-align:middle}
+ul, ol { list-style:none}
+img, fieldset { border:0}
+abbr, acronym { cursor:help; border-bottom:1px dotted black;border:0;font-variant:normal;}
+table {	width:100%; border-spacing:0; border:0}
+table th, table td { border:0}
+legend, hr { overflow:hidden; position:absolute; top:0; left:0}
+legend, hr, caption { visibility:hidden; font-size:0; width:0; height:0; line-height:0}
+/*input, select, textarea{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-webkit-appearance:button;-moz-appearance:button;-o-appearance:button;-ms-appearance:button;border-radius:0px;}*/
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;font-size:12px;}
+:focus{outline:0;}
+a{text-decoration:none;outline:none;}
+textarea{resize:none;}
+i{font-style:initial;}
+
+.fix{display:inline-block;}
+.fix{display:block;}
+.fix:after{content:"";display:block;height:0px; clear:both;visibility:hidden;}
+
+/* word-break */
+.wbn{word-break:keep-all;white-space:nowrap;}
+.wby{word-break:break-all;word-wrap:break-word;white-space:normal;}
+
+/*头部*/
+
+html{
+	background:#000;
+}
+
+.bg{
+	width: 100%;
+	height: 1px;
+	background:#c82f27;
+	position: absolute;
+	top:186px;
+	z-index:-1;
+}
+
+.s_body{
+	width: 1200px;
+	margin:0 auto;
+	color: #fff;
+}
+
+.header{
+	height: 225px;
+	background:#000;
+	text-align: center;
+	padding-top: 40px;
+	margin: 0 218px;
+	position: relative;
+}
+
+.header ul{
+    margin-top:36px;
+	background: #000;
+	font-size: 18px;
+}
+
+.header ul li{
+	padding:0 3%;
+	float: left;
+}
+
+.header ol{
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+
+.header ol li{
+	width: 40px;
+	float: left;
+	margin-left: 20px;
+}
+
+.header ol li img{
+	width: 100%;
+}
+
+/*底部*/
+
+.footer{
+	margin-top: 120px;
+}
+
+.footer_left{
+	width: 35%;
+	float: left;
+}
+
+.footer_right{
+	width: 65%;
+	float: left;
+}
+
+.footer_left h4{
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.footer_left h4 img{
+	margin-left: 18px;
+}
+
+.footer_left h5{
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.footer_left > img{
+	margin:26px 0 0;
+}
+
+.footer_right ul{
+	width: 25%;
+	float: left;
+	font-size: 16px;
+}
+
+.footer_right ul li h4{
+	font-size: 16px;
+	margin-bottom: 26px;
+}
+
+.footer_right ul p a{
+	color: #b1aeae;
+}
+
+.footer_right ul p{
+	line-height: 35px;
+}
+
+.footer_bottom{
+	width: 100%;
+	float: left;
+	margin: 50px 0 100px;
+}
+
+.footer_bottom p{
+	display: inline-block;
+	width: 40%;
+}
+
+.footer_bottom div{
+	display: inline-block;
+}
+
+.footer_bottom div img{
+	margin-right:16px;
+}

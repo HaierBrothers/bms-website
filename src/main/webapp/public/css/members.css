@@ -1,0 +1,69 @@
+.banner{
+	width: 100%;
+	height: 754px;
+	background: url(../images/logo3.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.banner .banner_cont{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 40px;
+}
+
+.banner h1{
+	font-size: 34px;
+	margin-bottom: 24px;
+}
+
+.banner h2{
+	font-size: 26px;
+}
+
+.banner p{
+	font-size: 16px;
+}
+
+.members_box{
+	padding:50px 0;
+	background: #fff;
+	color: #000;
+	text-align: center;
+}
+
+.members_box h2{
+	font-size: 20px;
+	margin-left: 60px;
+	margin-bottom: 60px;
+	text-align: left;
+}
+
+.members_box .box{
+	width: 33.3%;
+	float: left;
+	text-align: center;
+}
+
+.members_box .box img{
+	width: 190px;
+	margin-bottom: 40px;
+}
+
+.members_box .box p{
+	line-height: 20px;
+	margin-bottom: 20px;
+}
+
+.members_box a{
+	color: #000;
+	font-size: 15px;
+	border-radius: 6px;
+	border:1px solid #959595;
+	padding: 3px 20px;
+	margin:20px 0;
+	line-height: 22px;
+	display: inline-block;
+	box-shadow:5px 5px 3px rgba(180,180,180,0.3);
+}

@@ -1,0 +1,100 @@
+.date_box{
+	margin-bottom: 50px;
+	color: #fff;
+}
+
+.date_box h2{
+	font-size: 42px;
+	color: #c82f27;
+	margin:0 0 30px 60px;
+}
+
+.date_box h2 span{
+	color: #fff;
+	margin-left: 20px;
+}
+
+.date_box ul{
+	margin-bottom: 30px;
+}
+
+.date_box ul li{
+	width: 22%;
+	float: left;
+	overflow: hidden;
+}
+
+.date_box ul li.pic{
+	width: 34%;
+}
+
+.date_box ul li div{
+	width: 88%;
+	height: 88%;
+	padding: 6%;
+}
+
+.date_box ul li div.blue{
+	background: #062f4f;
+}
+
+.date_box ul li div.purple{
+	background: #813772;
+}
+
+.date_box ul li div.red{
+	background: #b82601;
+}
+
+.date_box ul li div.green{
+	background: #1e392a;
+}
+
+.date_box ul li div.gray{
+	background: #565656;
+}
+
+.date_box ul li div.yellow{
+	background: #d9b360;
+}
+
+.date_box ul li img{
+	width: 100%;
+	height: 100%;
+}
+
+.date_box ul li h3{
+	font-size: 34px;
+	font-weight: bold;
+}
+
+.date_box ul li p{
+	font-size:20px;
+	margin:20px 0 8px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	position: relative;
+}
+
+.date_box ul li p span{
+	position: absolute;
+	right: 0;
+	top:0;
+}
+
+.date_box ul li .hidden{
+	visibility: hidden;
+}
+
+.date_box ul li i{
+	font-size: 16px;
+	color: #a2a1a1;
+	line-height: 20px;
+	margin-bottom: 16px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
