@@ -1,6 +1,5 @@
 <%@page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8"  %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!doctype html>
 <html>
@@ -26,8 +25,8 @@
                 <li><a href="/feqs">FAQS</a></li>
             </ul> 
             <ol>
-                <li><a href="javascript"><img src="../../public/images/English.png" /></a></li>
-                <li><a href="javascript"><img src="../../public/images/Thailand.png" /></a></li>
+                <li><a id="CNBtn" class="chooseLanguageBtn" href="javascript" data_val="1"><img src="../../public/images/English.png" /></a></li>
+                <li><a id="ENBtn" class="chooseLanguageBtn" href="javascript" data_val="0"><img src="../../public/images/Thailand.png" /></a></li>
             </ol>
         </div>
         
@@ -52,28 +51,10 @@
             <c:if test="${null != sessionScope.newsList}" >
                 <c:forEach items="${sessionScope.newsList}" var="news">
                     <c:if test="${news.newsSort != 7}">
-                        <div class="news">
-                            <div class="news_bg">
-                                <div>
-                                    <h5>${news.titleCn}</h5>
-                                    <a class="link1" href="${news.fullArticle}">Full article</a>
-                                    <a class="link2" href="${news.website}">Website</a>
-                                    <p>${news.contentCn}</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="news"><div class="news_bg"><div><h5>${news.titleCn}</h5><a class="link1" href="${news.fullArticle}">Full article</a><a class="link2" href="${news.website}">Website</a><p>${news.contentCn}</p></div></div></div>
                     </c:if>
                     <c:if test="${news.newsSort == 7}">
-                        <div class="news height_news">
-                            <div class="news_bg">
-                                <div>
-                                    <h5>${news.titleCn}</h5>
-                                    <a class="link1" href="${news.fullArticle}">Full article</a>
-                                    <a class="link2" href="${news.website}">Website</a>
-                                    <p>${news.contentCn}</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="news height_news"><div class="news_bg"><div><h5>${news.titleCn}</h5><a class="link1" href="${news.fullArticle}">Full article</a><a class="link2" href="${news.website}">Website</a><p>${news.contentCn}</p></div></div></div>
                     </c:if>
                 </c:forEach>
             </c:if>
@@ -461,19 +442,120 @@
 
             <%@ include file="/include/foot.jsp"%>
     </div>
-    <%--<script src="/public/js/jquery.min.js"></script>--%>
-    <%--<script>--%>
-        <%--$('.nav li').click(function(){--%>
-            <%--$(this).addClass('on').siblings().removeClass();--%>
-            <%--var index = $(this).index();--%>
-            <%--$('.container ol').removeClass('current').eq(index).addClass('current');--%>
-        <%--});--%>
-        <%--$('.content_left .news .news_bg').mouseover(function(){--%>
-            <%--$(this).css('background','none');--%>
-        <%--});--%>
-        <%--$('.content_left .news .news_bg').mouseout(function(){--%>
-            <%--$(this).css('background','rgba(0,0,0,0.3)');--%>
-        <%--});--%>
-    <%--</script>--%>
+    <script src="/public/js/jquery.min.js"></script>
+    <script>
+        $('.nav li').click(function(){
+            $(this).addClass('on').siblings().removeClass();
+            var index = $(this).index();
+            $('.container ol').removeClass('current').eq(index).addClass('current');
+        });
+        $('.content_left .news .news_bg').mouseover(function(){
+            $(this).css('background','none');
+        });
+        $('.content_left .news .news_bg').mouseout(function(){
+            $(this).css('background','rgba(0,0,0,0.3)');
+        });
+
+        $(function(){
+            <%--var newsSmallHtmlStr = "<div class=\"news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";--%>
+            var newslargHtmlStr = "<div class=\"news height_news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";
+
+            function getBannerData() {
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: '/submitCryptocurrency',
+                    data:params,
+                    success: function (result) {
+                        if(undefined == result){
+                            alert("服务异常，请稍后再试");
+                        }else{
+                            var data = jQuery.parseJSON(result);
+                            if (data.code != 0) {
+                                alert("服务异常，请稍后再试");
+                            } else {
+                                var bannerHtmlStr = "";
+                                // 先获取 中英文标识
+                                var CNBTNVAL = $("#CNBtn").attr("data_val");
+                                var ENBTNVAL = $("#ENBtn").attr("data_val");
+                                if("1" == CNBTNVAL){
+                                    jQuery.each(result, function(i, val) {
+                                        bannerHtmlStr = bannerHtmlStr +  " <img src=\""+val+"\"  />";
+                                    });
+                                }
+                                if("1" == ENBTNVAL){
+                                    jQuery.each(result, function(i, val) {
+                                        bannerHtmlStr = bannerHtmlStr +  " <img src=\""+val+"\"  />";
+                                    });
+                                }
+                                $("div[class=banner]").append(bannerHtmlStr);
+                            }
+                        }
+                    }
+                });
+            }
+
+            function getNewsData() {
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: '/submitCryptocurrency',
+                    data:params,
+                    success: function (result) {
+                        if(undefined == result){
+                            alert("服务异常，请稍后再试");
+                        }else{
+                            var data = jQuery.parseJSON(result);
+                            if (data.code != 0) {
+                                alert("服务异常，请稍后再试");
+                            } else {
+                                var newsSmallHtmlStr =
+                                    "<div class=\"news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";
+                                // 先获取 中英文标识
+                                var CNBTNVAL = $("#CNBtn").attr("data_val");
+                                var ENBTNVAL = $("#ENBtn").attr("data_val");
+                                if("1" == CNBTNVAL){
+                                    jQuery.each(result, function(i, val) {
+                                        if("7" == val.newSort){
+                                            newsSmallHtmlStr = newsSmallHtmlStr +"<div class=\"news height_news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";
+                                        }else{
+                                            newsSmallHtmlStr = newsSmallHtmlStr + "<div class=\"news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";
+                                        }
+                                    });
+                                }
+                                if("1" == ENBTNVAL){
+                                    jQuery.each(result, function(i, val) {
+                                        if("7" == val.newSort){
+                                            newsSmallHtmlStr = newsSmallHtmlStr +"<div class=\"news height_news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";
+                                        }else{
+                                            newsSmallHtmlStr = newsSmallHtmlStr + "<div class=\"news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";
+                                        }                                    });
+                                }
+                                $("div[class=content_left]").append(newsSmallHtmlStr);
+                            }
+                        }
+                    }
+                });
+            }
+
+            getBannerData();
+            getNewsData();
+
+            // 注册切换中英文时间
+            $(".chooseLanguageBtn").on("click",function () {
+                var clBtn = $(this).attr("id");
+                if(null != clBtn&& undefined != clBtn){
+                    if(clBtn == "CNBtn"){
+                        $("#CNBtn").attr("data_val","1");
+                        $("#ENBtn").attr("data_val","0");
+                    }else{
+                        $("#CNBtn").attr("data_val","0");
+                        $("#ENBtn").attr("data_val","1");
+                    }
+                }
+            });
+            
+        });
+    </script>
 </body>
 </html>

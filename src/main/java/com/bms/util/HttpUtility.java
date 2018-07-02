@@ -13,12 +13,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-/**
- * http工具类
- *
- * @auther xinch
- * @create 2018/4/24 14:52
- */
 public class HttpUtility {
 
     /**
@@ -32,8 +26,6 @@ public class HttpUtility {
      * 重试次数
      */
     private static final int RETRY_COUNT = 1;
-
-//	private static MultiThreadedHttpConnectionManager connectionManager = new MultiThreadedHttpConnectionManager();
 
     public static String post(String url, String body) throws Exception {
         return post(url,body,null,null);

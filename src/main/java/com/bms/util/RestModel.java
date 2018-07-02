@@ -1,8 +1,6 @@
 package com.bms.util;
 
-import com.bms.website.enums.BllConstantEnum;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.bms.enums.BllConstantEnum;
 
 import java.io.Serializable;
 
@@ -151,22 +149,5 @@ public class RestModel implements Serializable{
         rm.setErrorDescription(bllEnum.getDesc()+desc);
         rm.setDataObject(data);
         return rm;
-    }
-    /**
-     * 将RestModel转换为字符串
-     * @param model
-     * @return
-     */
-    public static String getRestJosn(RestModel model) {
-        String json = "";
-        long code = BllConstantEnum.RESCODE_1.getCode();
-        String desc = BllConstantEnum.RESCODE_1.getDesc();
-        if (model == null) {
-            json = RestModel.getRestModel(code, desc).toString();
-        } else {
-            Gson gson = new GsonBuilder().enableComplexMapKeySerialization().create();
-            json = gson.toJson(model, RestModel.class);
-        }
-        return json;
     }
 }

@@ -7,12 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * 事件控制
- *
- * @auther xinch
- * @create 2018/6/30 11:43
- */
 @Controller
 public class EventsController {
 

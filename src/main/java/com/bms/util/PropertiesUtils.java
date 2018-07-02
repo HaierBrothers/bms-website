@@ -8,15 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-/**
- *
- * 配置文件工具类
- * 这样此类即完成了PropertyPlaceholderConfigurer的任务，
- * 同时又提供了上下文properties访问的功能。
- * 于是在Spring配置文件中把PropertyPlaceholderConfigurer
- * 改成CustomizedPropertyConfigurer
- * @author xinqch
- */
 public class PropertiesUtils extends PropertyPlaceholderConfigurer {
 
     private static Map<String, Object> ctxPropertiesMap;

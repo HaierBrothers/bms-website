@@ -12,12 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- * 登陆控制
- *
- * @auther xinch
- * @create 2018/6/30 9:32
- */
 @Controller
 public class IndexController {
 
