@@ -1,5 +1,6 @@
 <%@page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8"  %>
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false" %>
 <!doctype html>
 <html>
 <head>
@@ -8,25 +9,25 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
 	<title>members</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/public.css" />
-	<link rel="stylesheet" type="text/css" href="../../public/css/members.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/public/css/public.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/public/css/members.css" />
 </head>
 <body>
     <p class="bg"></p>
     <div class="s_body">
     	<div class="header">
-            <img src="../../public/images/logo.png" />
+            <img src="<%=request.getContextPath()%>/public/images/logo.png" />
             <ul>
-                <li><a href="/index">HOME</a></li>
-                <li><a href="/events">EVENTS</a></li>
-                <li><a href="/cryptocurrency">CRYPTOCURRENCY</a></li>
-                <li><a href="chart.html">CHART</a></li>
-                <li><a href="/members">MEMBERS</a></li>
-                <li><a href="/feqs">FAQS</a></li>
+                <li><a href="<%=request.getContextPath()%>/index">HOME</a></li>
+                <li><a href="<%=request.getContextPath()%>/events">EVENTS</a></li>
+                <li><a href="<%=request.getContextPath()%>/cryptocurrency">CRYPTOCURRENCY</a></li>
+                <li><a href="<%=request.getContextPath()%>/chart">CHART</a></li>
+                <li><a href="<%=request.getContextPath()%>/members">MEMBERS</a></li>
+                <li><a href="<%=request.getContextPath()%>/feqs">FAQS</a></li>
             </ul> 
             <ol> 
-                <li><a href="javascript"><img src="../../public/images/English.png" /></a></li>
-                <li><a href="javascript"><img src="../../public/images/Thailand.png" /></a></li>
+                <li><a href="javascript"><img src="<%=request.getContextPath()%>/public/images/English.png" /></a></li>
+                <li><a href="javascript"><img src="<%=request.getContextPath()%>/public/images/Thailand.png" /></a></li>
             </ol>  
         </div>
         
@@ -42,13 +43,13 @@
         <div class="members_box">
             <h2>Membership Class</h2>
             <div class="box">
-                <img src="../../public/images/logo4.png" />
+                <img src="<%=request.getContextPath()%>/public/images/logo4.png" />
                 <p>Free cost</p>
                 <p>News & Updates</p>
                 <p>Meet up- Events <br />(Social Media)</p>
             </div>
             <div class="box">
-                <img src="../../public/images/logo5.png" />
+                <img src="<%=request.getContextPath()%>/public/images/logo5.png" />
                 <p>Cost</p>
                 <p>News & Updates</p>
                 <p>Meet up- Events <br />(Social Media)</p>
@@ -59,7 +60,7 @@
                 <p>i-Token Privileges</p>
             </div>
             <div class="box">
-                <img src="../../public/images/logo5.png" />
+                <img src="<%=request.getContextPath()%>/public/images/logo5.png" />
                 <p>Cost</p>
                 <p>News & Updates</p>
                 <p>Meet up- Events <br />(Social Media)</p>
@@ -80,10 +81,10 @@
 
         <div class="footer">
             <div class="footer_left">
-                <h4>Visit FO.com <img src="../../public/images/logo2.png" /></h4>
+                <h4>Visit FO.com <img src="<%=request.getContextPath()%>/public/images/logo2.png" /></h4>
                 <h5>Official FO Wechat Account</h5>
                 <p>Follow FO's official WeChat to obtain unique FO information first.</p>
-                <img src="../../public/images/WechatQRcode.png" />
+                <img src="<%=request.getContextPath()%>/public/images/WechatQRcode.png" />
             </div>
             <div class="footer_right">
                 <ul>

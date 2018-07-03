@@ -1,5 +1,6 @@
 <%@page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8"  %>
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false" %>
 <!doctype html>
 <html>
 <head>
@@ -8,25 +9,25 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
 	<title>events</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/public.css" />
-	<link rel="stylesheet" type="text/css" href="../../public/css/events.css" />       
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/public/css/public.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/public/css/events.css" />       
 </head>
 <body>
     <p class="bg"></p>
     <div class="s_body">
     	<div class="header">
-            <img src="../../public/images/logo.png" />
+            <img src="<%=request.getContextPath()%>/public/images/logo.png" />
             <ul>
-                <li><a href="/index">HOME</a></li>
-                <li><a href="/events">EVENTS</a></li>
-                <li><a href="/cryptocurrency">CRYPTOCURRENCY</a></li>
-                <li><a href="chart.html">CHART</a></li>
-                <li><a href="/members">MEMBERS</a></li>
-                <li><a href="/feqs">FAQS</a></li>
+                <li><a href="<%=request.getContextPath()%>/index">HOME</a></li>
+                <li><a href="<%=request.getContextPath()%>/events">EVENTS</a></li>
+                <li><a href="<%=request.getContextPath()%>/cryptocurrency">CRYPTOCURRENCY</a></li>
+                <li><a href="<%=request.getContextPath()%>/chart">CHART</a></li>
+                <li><a href="<%=request.getContextPath()%>/members">MEMBERS</a></li>
+                <li><a href="<%=request.getContextPath()%>/feqs">FAQS</a></li>
             </ul> 
             <ol> 
-                <li><a href="javascript"><img src="../../public/images/English.png" /></a></li>
-                <li><a href="javascript"><img src="../../public/images/Thailand.png" /></a></li>
+                <li><a href="javascript"><img src="<%=request.getContextPath()%>/public/images/English.png" /></a></li>
+                <li><a href="javascript"><img src="<%=request.getContextPath()%>/public/images/Thailand.png" /></a></li>
             </ol>  
         </div>
     </div>
@@ -34,7 +35,7 @@
         <h2>JULY <span>2018</span></h2>
         <ul>
             <li class="pic">
-                <img src="../../public/images/pic4.png" />
+                <img src="<%=request.getContextPath()%>/public/images/pic4.png" />
             </li>
             <li>
                 <div class="date blue">
@@ -92,7 +93,7 @@
                 </div>
             </li>
             <li class="pic">
-                <img src="../../public/images/pic4.png" />
+                <img src="<%=request.getContextPath()%>/public/images/pic4.png" />
             </li>
             <li>
                 <div class="date green">
@@ -106,7 +107,7 @@
                 </div>
             </li>
             <li class="pic">
-                <img src="../../public/images/pic4.png" />
+                <img src="<%=request.getContextPath()%>/public/images/pic4.png" />
             </li>
             <li>
                 <div class="date purple">
@@ -175,7 +176,7 @@
                 </div>
             </li>
             <li class="pic">
-                <img src="../../public/images/pic4.png" />
+                <img src="<%=request.getContextPath()%>/public/images/pic4.png" />
             </li>
             <div style="clear:both;"></div>
         </ul>
@@ -193,7 +194,7 @@
                 </div>
             </li>
             <li class="pic">
-                <img src="../../public/images/pic4.png" />
+                <img src="<%=request.getContextPath()%>/public/images/pic4.png" />
             </li>
             <li>
                 <div class="date yellow">
@@ -224,10 +225,10 @@
     <div class="s_body">
         <div class="footer">
             <div class="footer_left">
-                <h4>Visit FO.com <img src="../../public/images/logo2.png" /></h4>
+                <h4>Visit FO.com <img src="<%=request.getContextPath()%>/public/images/logo2.png" /></h4>
                 <h5>Official FO Wechat Account</h5>
                 <p>Follow FO's official WeChat to obtain unique FO information first.</p>
-                <img src="../../public/images/WechatQRcode.png" />
+                <img src="<%=request.getContextPath()%>/public/images/WechatQRcode.png" />
             </div>
             <div class="footer_right">
                 <ul>
@@ -275,7 +276,7 @@
         </div>
     </div>
     
-    <script src="../../public/js/jquery.min.js"></script>
+    <script src="<%=request.getContextPath()%>/public/js/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
             $(".date_box ul li img").on('load',function(){

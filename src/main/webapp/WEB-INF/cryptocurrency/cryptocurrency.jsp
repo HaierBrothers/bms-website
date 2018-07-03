@@ -9,99 +9,99 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
 	<title>cryptocuttency</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/public.css" />
-	<link rel="stylesheet" type="text/css" href="../../public/css/cryptocurrency.css" />       
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/public/css/public.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/public/css/cryptocurrency.css" />       
 </head>
 <body>
     <p class="bg"></p>
     <div class="s_body">
     	<div class="header">
-            <img src="../../public/images/logo.png" />
+            <img src="<%=request.getContextPath()%>/public/images/logo.png" />
             <ul>
-                <li><a href="/index">HOME</a></li>
-                <li><a href="/events">EVENTS</a></li>
-                <li><a href="/cryptocurrency">CRYPTOCURRENCY</a></li>
-                <li><a href="chart.html">CHART</a></li>
-                <li><a href="/members">MEMBERS</a></li>
-                <li><a href="/feqs">FAQS</a></li>
+                <li><a href="<%=request.getContextPath()%>/index">HOME</a></li>
+                <li><a href="<%=request.getContextPath()%>/events">EVENTS</a></li>
+                <li><a href="<%=request.getContextPath()%>/cryptocurrency">CRYPTOCURRENCY</a></li>
+                <li><a href="<%=request.getContextPath()%>/chart">CHART</a></li>
+                <li><a href="<%=request.getContextPath()%>/members">MEMBERS</a></li>
+                <li><a href="<%=request.getContextPath()%>/feqs">FAQS</a></li>
             </ul>
             <ol>
-                <li><a id="CNBtn" class="chooseLanguageBtn" href="javascript" data_val="1"><img src="../../public/images/English.png" /></a></li>
-                <li><a id="ENBtn" class="chooseLanguageBtn" href="javascript" data_val="0"><img src="../../public/images/Thailand.png" /></a></li>
+                <li><a id="CNBtn" class="chooseLanguageBtn" href="javascript" data_val="1"><img src="<%=request.getContextPath()%>/public/images/English.png" /></a></li>
+                <li><a id="ENBtn" class="chooseLanguageBtn" href="javascript" data_val="0"><img src="<%=request.getContextPath()%>/public/images/Thailand.png" /></a></li>
             </ol>
         </div>
         
         <ul class="logo_box">
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_BTC.png" />--%>
                <%--<p><a href="javascript:;">BTC</a></p>--%>
            <%--</li> --%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_LTC.png" />--%>
                <%--<p><a href="javascript:;">LTC</a></p>--%>
            <%--</li>--%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_BTC.png" />--%>
                <%--<p><a href="javascript:;">BTC</a></p>--%>
            <%--</li> --%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_LTC.png" />--%>
                <%--<p><a href="javascript:;">LTC</a></p>--%>
            <%--</li>--%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_BTC.png" />--%>
                <%--<p><a href="javascript:;">BTC</a></p>--%>
            <%--</li> --%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_LTC.png" />--%>
                <%--<p><a href="javascript:;">LTC</a></p>--%>
            <%--</li>--%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_BTC.png" />--%>
                <%--<p><a href="javascript:;">BTC</a></p>--%>
            <%--</li> --%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_LTC.png" />--%>
                <%--<p><a href="javascript:;">LTC</a></p>--%>
            <%--</li>--%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_BTC.png" />--%>
                <%--<p><a href="javascript:;">BTC</a></p>--%>
            <%--</li> --%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_LTC.png" />--%>
                <%--<p><a href="javascript:;">LTC</a></p>--%>
            <%--</li>--%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_BTC.png" />--%>
                <%--<p><a href="javascript:;">BTC</a></p>--%>
            <%--</li> --%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_LTC.png" />--%>
                <%--<p><a href="javascript:;">LTC</a></p>--%>
            <%--</li>--%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_BTC.png" />--%>
                <%--<p><a href="javascript:;">BTC</a></p>--%>
            <%--</li> --%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_LTC.png" />--%>
                <%--<p><a href="javascript:;">LTC</a></p>--%>
            <%--</li>--%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_BTC.png" />--%>
                <%--<p><a href="javascript:;">BTC</a></p>--%>
            <%--</li> --%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_LTC.png" />--%>
                <%--<p><a href="javascript:;">LTC</a></p>--%>
            <%--</li>--%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_BTC.png" />--%>
                <%--<p><a href="javascript:;">BTC</a></p>--%>
            <%--</li> --%>
            <%--<li>--%>
-               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<img src="<%=request.getContextPath()%>/public/images/coin_LTC.png" />--%>
                <%--<p><a href="javascript:;">LTC</a></p>--%>
            <%--</li>--%>
            <div style="clear:both;"></div>
@@ -109,10 +109,10 @@
 
         <div class="footer">
             <div class="footer_left">
-                <h4>Visit FO.com <img src="../../public/images/logo2.png" /></h4>
+                <h4>Visit FO.com <img src="<%=request.getContextPath()%>/public/images/logo2.png" /></h4>
                 <h5>Official FO Wechat Account</h5>
                 <p>Follow FO's official WeChat to obtain unique FO information first.</p>
-                <img src="../../public/images/WechatQRcode.png" />
+                <img src="<%=request.getContextPath()%>/public/images/WechatQRcode.png" />
             </div>
             <div class="footer_right">
                 <ul>
@@ -159,20 +159,20 @@
             <div class="footer_bottom">
                 <p>Copyright © 2018 ICOTHCLUB. All rights reserved.</p>
                 <div>
-                    <img src="../../public/images/facebook-logo.png" />
-                    <img src="../../public/images/twitter.png" />
-                    <img src="../../public/images/line-logo.png" />
-                    <img src="../../public/images/instagram-logo.png" />
-                    <img src="../../public/images/wechat.png" />
+                    <img src="<%=request.getContextPath()%>/public/images/facebook-logo.png" />
+                    <img src="<%=request.getContextPath()%>/public/images/twitter.png" />
+                    <img src="<%=request.getContextPath()%>/public/images/line-logo.png" />
+                    <img src="<%=request.getContextPath()%>/public/images/instagram-logo.png" />
+                    <img src="<%=request.getContextPath()%>/public/images/wechat.png" />
                 </div>
             </div>
         </div>
 
         <div class="shadeBg"></div>
         <div class="remind">
-            <%--<img src="../../public/images/cancel.png" />--%>
+            <%--<img src="<%=request.getContextPath()%>/public/images/cancel.png" />--%>
             <%--<div class="title">--%>
-                <%--<img src="../../public/images/coin_LTC.png" />--%>
+                <%--<img src="<%=request.getContextPath()%>/public/images/coin_LTC.png" />--%>
                 <%--<h4>Bitcoin[BTC]</h4>--%>
             <%--</div>--%>
             <%--<h5>Info</h5>--%>
@@ -191,7 +191,7 @@
             <%--<h5><a href="javascript:;">Official website</a></h5>--%>
         </div>
     </div>
-    <script src="../../public/js/jquery.min.js"></script>
+    <script src="<%=request.getContextPath()%>/public/js/jquery.min.js"></script>
     <script>
         $(function(){
             $(".logo_box a").click(function(){
@@ -272,11 +272,11 @@
                             var dataVal = result.dataObject;
                             if("1" == CNBTNVAL){
                                 alert(dataVal.dialogLogoUrl);
-                                cryptocurrencyDetailHtmlStr = "<img src=\"../../public/images/cancel.png\" /><div class=\"title\"><img src=\""+dataVal.dialogLogoUrl+"\" /><h4>"+dataVal.logoNameCn+"</h4></div><h5>Info</h5> <p>"+dataVal.contentCn+"</p> <h5><a href=\""+dataVal.website+"\">Official website</a></h5>";
+                                cryptocurrencyDetailHtmlStr = "<img src=\"<%=request.getContextPath()%>/public/images/cancel.png\" /><div class=\"title\"><img src=\""+dataVal.dialogLogoUrl+"\" /><h4>"+dataVal.logoNameCn+"</h4></div><h5>Info</h5> <p>"+dataVal.contentCn+"</p> <h5><a href=\""+dataVal.website+"\">Official website</a></h5>";
 
                             }
                             if("1" == ENBTNVAL){
-                                cryptocurrencyDetailHtmlStr = "<img src=\"../../public/images/cancel.png\" /><div class=\"title\"><img src=\""+dataVal.dialogLogoUrl+"\" /><h4>"+dataVal.logoNameEn+"</h4></div><h5>Info</h5> <p>"+dataVal.contentEn+"</p> <h5><a href=\""+dataVal.website+"\"> Official website</a></h5>";
+                                cryptocurrencyDetailHtmlStr = "<img src=\"<%=request.getContextPath()%>/public/images/cancel.png\" /><div class=\"title\"><img src=\""+dataVal.dialogLogoUrl+"\" /><h4>"+dataVal.logoNameEn+"</h4></div><h5>Info</h5> <p>"+dataVal.contentEn+"</p> <h5><a href=\""+dataVal.website+"\"> Official website</a></h5>";
                             }
                             $("div[class=remind]").append(cryptocurrencyDetailHtmlStr);
 
