@@ -20,26 +20,15 @@ public class IndexController {
 
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String login(HttpServletRequest request, HttpServletResponse response){
-        try {
-            //1.加载轮播图
-            String reslut = HttpUtility.get(URL_PRIX + "/mainPage/getAllBanner");
-            if (!StringUtils.isEmpty(reslut)){
-                JSONArray arrayList = JSONArray.parseArray(reslut);
-                // 将查询出来的用户信息保存到session对象中
-                HttpSession session = request.getSession();
-                session.setAttribute("bannerList", arrayList);
-            }
-            //2. 加载新闻
-            reslut = HttpUtility.get(URL_PRIX + "/mainPage/getAllNews");
-            if (!StringUtils.isEmpty(reslut)){
-                JSONArray arrayList = JSONArray.parseArray(reslut);
-                // 将查询出来的用户信息保存到session对象中
-                HttpSession session = request.getSession();
-                session.setAttribute("newsList", arrayList);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        request.setAttribute("DATA_PATH",URL_PRIX);
+
+//            reslut = HttpUtility.get(URL_PRIX + "/mainPage/getAllNews");
+//            if (!StringUtils.isEmpty(reslut)){
+//                JSONArray arrayList = JSONArray.parseArray(reslut);
+//                // 将查询出来的用户信息保存到session对象中
+//                HttpSession session = request.getSession();
+//                session.setAttribute("newsList", arrayList);
+//            }
         return  "index/index";
     }
 
