@@ -1,6 +1,6 @@
 <%@page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8"  %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@ page isELIgnored="false" %>
 <!doctype html>
 <html>
 <head>
@@ -24,93 +24,86 @@
                 <li><a href="chart.html">CHART</a></li>
                 <li><a href="/members">MEMBERS</a></li>
                 <li><a href="/feqs">FAQS</a></li>
-            </ul> 
-            <ol> 
-                <li><a href="javascript"><img src="../../public/images/English.png" /></a></li>
-                <li><a href="javascript"><img src="../../public/images/Thailand.png" /></a></li>
-            </ol>  
+            </ul>
+            <ol>
+                <li><a id="CNBtn" class="chooseLanguageBtn" href="javascript" data_val="1"><img src="../../public/images/English.png" /></a></li>
+                <li><a id="ENBtn" class="chooseLanguageBtn" href="javascript" data_val="0"><img src="../../public/images/Thailand.png" /></a></li>
+            </ol>
         </div>
         
         <ul class="logo_box">
-            <%--<c:forEach items="${sessionScope.list}" var="logo">--%>
-                <%--<li>--%>
-                    <%--<img src="${logo.logoUrl}" />--%>
-                    <%--<p><a href="javascript:;">${logo.logoNameCn}</a></p>--%>
-                <%--</li>--%>
-            <%--</c:forEach>--%>
-
-           <li>
-               <img src="../../public/images/coin_BTC.png" />
-               <p><a href="javascript:;">BTC</a></p>
-           </li> 
-           <li>
-               <img src="../../public/images/coin_LTC.png" />
-               <p><a href="javascript:;">LTC</a></p>
-           </li>
-           <li>
-               <img src="../../public/images/coin_BTC.png" />
-               <p><a href="javascript:;">BTC</a></p>
-           </li> 
-           <li>
-               <img src="../../public/images/coin_LTC.png" />
-               <p><a href="javascript:;">LTC</a></p>
-           </li>
-           <li>
-               <img src="../../public/images/coin_BTC.png" />
-               <p><a href="javascript:;">BTC</a></p>
-           </li> 
-           <li>
-               <img src="../../public/images/coin_LTC.png" />
-               <p><a href="javascript:;">LTC</a></p>
-           </li>
-           <li>
-               <img src="../../public/images/coin_BTC.png" />
-               <p><a href="javascript:;">BTC</a></p>
-           </li> 
-           <li>
-               <img src="../../public/images/coin_LTC.png" />
-               <p><a href="javascript:;">LTC</a></p>
-           </li>
-           <li>
-               <img src="../../public/images/coin_BTC.png" />
-               <p><a href="javascript:;">BTC</a></p>
-           </li> 
-           <li>
-               <img src="../../public/images/coin_LTC.png" />
-               <p><a href="javascript:;">LTC</a></p>
-           </li>
-           <li>
-               <img src="../../public/images/coin_BTC.png" />
-               <p><a href="javascript:;">BTC</a></p>
-           </li> 
-           <li>
-               <img src="../../public/images/coin_LTC.png" />
-               <p><a href="javascript:;">LTC</a></p>
-           </li>
-           <li>
-               <img src="../../public/images/coin_BTC.png" />
-               <p><a href="javascript:;">BTC</a></p>
-           </li> 
-           <li>
-               <img src="../../public/images/coin_LTC.png" />
-               <p><a href="javascript:;">LTC</a></p>
-           </li>
-           <li>
-               <img src="../../public/images/coin_BTC.png" />
-               <p><a href="javascript:;">BTC</a></p>
-           </li> 
-           <li>
-               <img src="../../public/images/coin_LTC.png" />
-               <p><a href="javascript:;">LTC</a></p>
-           </li>
-           <li>
-               <img src="../../public/images/coin_BTC.png" />
-               <p><a href="javascript:;">BTC</a></p>
-           </li> 
-           <li>
-               <img src="../../public/images/coin_LTC.png" />
-               <p><a href="javascript:;">LTC</a></p>
-           </li>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<p><a href="javascript:;">BTC</a></p>--%>
+           <%--</li> --%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<p><a href="javascript:;">LTC</a></p>--%>
+           <%--</li>--%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<p><a href="javascript:;">BTC</a></p>--%>
+           <%--</li> --%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<p><a href="javascript:;">LTC</a></p>--%>
+           <%--</li>--%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<p><a href="javascript:;">BTC</a></p>--%>
+           <%--</li> --%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<p><a href="javascript:;">LTC</a></p>--%>
+           <%--</li>--%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<p><a href="javascript:;">BTC</a></p>--%>
+           <%--</li> --%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<p><a href="javascript:;">LTC</a></p>--%>
+           <%--</li>--%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<p><a href="javascript:;">BTC</a></p>--%>
+           <%--</li> --%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<p><a href="javascript:;">LTC</a></p>--%>
+           <%--</li>--%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<p><a href="javascript:;">BTC</a></p>--%>
+           <%--</li> --%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<p><a href="javascript:;">LTC</a></p>--%>
+           <%--</li>--%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<p><a href="javascript:;">BTC</a></p>--%>
+           <%--</li> --%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<p><a href="javascript:;">LTC</a></p>--%>
+           <%--</li>--%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<p><a href="javascript:;">BTC</a></p>--%>
+           <%--</li> --%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<p><a href="javascript:;">LTC</a></p>--%>
+           <%--</li>--%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_BTC.png" />--%>
+               <%--<p><a href="javascript:;">BTC</a></p>--%>
+           <%--</li> --%>
+           <%--<li>--%>
+               <%--<img src="../../public/images/coin_LTC.png" />--%>
+               <%--<p><a href="javascript:;">LTC</a></p>--%>
+           <%--</li>--%>
            <div style="clear:both;"></div>
         </ul>
 
@@ -177,31 +170,32 @@
 
         <div class="shadeBg"></div>
         <div class="remind">
-            <img src="../../public/images/cancel.png" />
-            <div class="title">
-                <img src="../../public/images/coin_LTC.png" />
-                <h4>Bitcoin[BTC]</h4>
-            </div>
-            <h5>Info</h5>
-            <p>Bitcoin is the first implementation of a concept called crypto-currency, which was first described in 1998 by Wei Dai on the cypherpunks mailing list. Building upon the notion that money is any object, or any sort of record, accepted as payment for goods and services and repayment of debts in a given country or socio-economic context, Bitcoin is designed around the idea of a new form of money that uses cryptography to control its creation and transactions, rather than relying on central authorities. </p><br /><br />
-            <p>In 2009, the first Bitcoin specification and proof of concept was published in a cryptography mailing list by a member under the pseudonym of Satoshi Nakamoto.Towards the end of 2010 Satoshi left the project, saying he had moved on to other things. However since 2010, the Bitcoin community has grown a lot. And there is no wonder: Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</p>
-            <h5>Specifications:</h5>
-            <p>SHA-256d</p>
-            <p>Proof of Work</p>
-            <p>Block Time, sec: 600</p>
-            <p>Reward, coins per block: 50</p>
-            <p>Halfing reward cycle, blocks: 210240</p>
-            <p>Total coins: 21000000</p>
-            <p>Difficulty cycle, blocks: 2016</p>
-            <p>Txs Confirm: 6</p>
-            <p>Coin maturity confirm, blocks: 120</p>
-            <h5><a href="javascript:;">Official website</a></h5>
+            <%--<img src="../../public/images/cancel.png" />--%>
+            <%--<div class="title">--%>
+                <%--<img src="../../public/images/coin_LTC.png" />--%>
+                <%--<h4>Bitcoin[BTC]</h4>--%>
+            <%--</div>--%>
+            <%--<h5>Info</h5>--%>
+            <%--<p>Bitcoin is the first implementation of a concept called crypto-currency, which was first described in 1998 by Wei Dai on the cypherpunks mailing list. Building upon the notion that money is any object, or any sort of record, accepted as payment for goods and services and repayment of debts in a given country or socio-economic context, Bitcoin is designed around the idea of a new form of money that uses cryptography to control its creation and transactions, rather than relying on central authorities. </p><br /><br />--%>
+            <%--<p>In 2009, the first Bitcoin specification and proof of concept was published in a cryptography mailing list by a member under the pseudonym of Satoshi Nakamoto.Towards the end of 2010 Satoshi left the project, saying he had moved on to other things. However since 2010, the Bitcoin community has grown a lot. And there is no wonder: Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</p>--%>
+            <%--<h5>Specifications:</h5>--%>
+            <%--<p>SHA-256d</p>--%>
+            <%--<p>Proof of Work</p>--%>
+            <%--<p>Block Time, sec: 600</p>--%>
+            <%--<p>Reward, coins per block: 50</p>--%>
+            <%--<p>Halfing reward cycle, blocks: 210240</p>--%>
+            <%--<p>Total coins: 21000000</p>--%>
+            <%--<p>Difficulty cycle, blocks: 2016</p>--%>
+            <%--<p>Txs Confirm: 6</p>--%>
+            <%--<p>Coin maturity confirm, blocks: 120</p>--%>
+            <%--<h5><a href="javascript:;">Official website</a></h5>--%>
         </div>
     </div>
     <script src="../../public/js/jquery.min.js"></script>
     <script>
-        $(function(){    
+        $(function(){
             $(".logo_box a").click(function(){
+                getCryptocurrencyDataById($(this));
                 $(".remind").show();
                 $(".shadeBg").show();
             });
@@ -209,8 +203,106 @@
                 $(".remind").hide();
                 $(".shadeBg").hide();
             });
+            var DATA_PATH = "${DATA_PATH}";
+
+            getCryptocurrencyData();
+            function getCryptocurrencyData() {
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: DATA_PATH+ '/cryptocurrency/getHis',
+                    success: function (result) {
+
+                        if (result.code != 0) {
+                            alert("服务异常，请稍后再试");
+                        } else {
+                            var cryptocurrencyHtmlStr = "";
+                            <%--// 先获取 中英文标识--%>
+                            var CNBTNVAL = $("#CNBtn").attr("data_val");
+                            var ENBTNVAL = $("#ENBtn").attr("data_val");
+
+                            if("1" == CNBTNVAL){
+                                $.each(result.dataObject, function(i, val) {
+                                        cryptocurrencyHtmlStr = cryptocurrencyHtmlStr +  " <li><img src=\""+val.logoUrl+"\" /><p><a href=\"javascript:;\" data-val=\""+val.sid+"\">"+val.titleCn+"</a></p></li>";
+                                });
+                            }
+                            if("1" == ENBTNVAL){
+                                $.each(result.dataObject, function(i, val) {
+                                    cryptocurrencyHtmlStr = cryptocurrencyHtmlStr +  " <li><img src=\""+val.logoUrl+"\" /><p><a href=\"javascript:;\"  data-val=\""+val.sid+"\">"+val.titleEn+"</a></p></li>";
+                                });
+                            }
+                            $("ul[class=logo_box]").append(cryptocurrencyHtmlStr);
 
 
+                            $(".logo_box a").click(function(){
+                                getCryptocurrencyDataById($(this));
+                                $(".remind").show();
+                                $(".shadeBg").show();
+                            });
+                            $('.shadeBg,.remind > img').click(function(){
+                                $(".remind").hide();
+                                $(".shadeBg").hide();
+                            });
+                        }
+                    }
+                });
+            }
+
+
+
+            function getCryptocurrencyDataById(obj) {
+                var sid = $(obj).attr("data-val");
+                alert(sid);
+                var params = {};
+                params["sid"] = sid;
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    data:params,
+                    url: DATA_PATH+ '/cryptocurrency/getOneById',
+                    success: function (result) {
+
+                        if (result.code != 0) {
+                            alert("服务异常，请稍后再试");
+                        } else {
+                            var cryptocurrencyDetailHtmlStr = "";
+                            <%--// 先获取 中英文标识--%>
+                            var CNBTNVAL = $("#CNBtn").attr("data_val");
+                            var ENBTNVAL = $("#ENBtn").attr("data_val");
+                            var dataVal = result.dataObject;
+                            if("1" == CNBTNVAL){
+                                alert(dataVal.dialogLogoUrl);
+                                cryptocurrencyDetailHtmlStr = "<img src=\"../../public/images/cancel.png\" /><div class=\"title\"><img src=\""+dataVal.dialogLogoUrl+"\" /><h4>"+dataVal.logoNameCn+"</h4></div><h5>Info</h5> <p>"+dataVal.contentCn+"</p> <h5><a href=\""+dataVal.website+"\">Official website</a></h5>";
+
+                            }
+                            if("1" == ENBTNVAL){
+                                cryptocurrencyDetailHtmlStr = "<img src=\"../../public/images/cancel.png\" /><div class=\"title\"><img src=\""+dataVal.dialogLogoUrl+"\" /><h4>"+dataVal.logoNameEn+"</h4></div><h5>Info</h5> <p>"+dataVal.contentEn+"</p> <h5><a href=\""+dataVal.website+"\"> Official website</a></h5>";
+                            }
+                            $("div[class=remind]").append(cryptocurrencyDetailHtmlStr);
+
+                            $(".remind").show();
+                            $(".shadeBg").show();
+
+                            $('.shadeBg,.remind > img').on("click",function(){
+                                $(".remind").hide();
+                                $(".shadeBg").hide();
+
+                                $("div[class=remind]").html("");
+                            });
+
+
+                        }
+                    }
+                });
+            }
+            $(".logo_box a").on("click",function(){
+                $(".remind").show();
+                $(".shadeBg").show();
+            });
+            $('.shadeBg,.remind > img').on("click",function(){
+                $(".remind").hide();
+                $(".shadeBg").hide();
+            });
         });
     </script>
 </body>

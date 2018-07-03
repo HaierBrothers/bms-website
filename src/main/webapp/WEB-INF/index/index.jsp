@@ -457,20 +457,8 @@
         $('.content_left .news .news_bg').mouseout(function(){
             $(this).css('background','rgba(0,0,0,0.3)');
         });
-
-            <%--var newsSmallHtmlStr = "<div class=\"news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";--%>
-            var newslargHtmlStr = "<div class=\"news height_news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";
-
             var DATA_PATH = "${DATA_PATH}";
             function getBannerData() {
-//                var params = "[{\"sid\":1,\"picUrl\":\"http://p0.so.qhmsg.com/bdr/_240_/t01f1fdf0d724293e25.jpg\",\"picSort\":1},{\"sid\":2,\"picUrl\":\"http://p1.so.qhmsg.com/bdr/_240_/t01555ea91ad55c9af6.jpg\",\"picSort\":2},{\"sid\":3,\"picUrl\":\"http://p1.so.qhimgs1.com/bdr/_240_/t01cd4ba7aa4e636c6d.jpg\",\"picSort\":3},{\"sid\":4,\"picUrl\":\"http://p2.so.qhimgs1.com/bdr/_240_/t014d198acf3392d572.png\",\"picSort\":4},{\"sid\":5,\"picUrl\":\"http://p1.so.qhimgs1.com/bdr/_240_/t015089b186e1d83d8d.jpg\",\"picSort\":5}]"
-//                var obj = eval("("+params+")");
-//                var bannerHtmlStr = "";
-//                $.each(obj,function(name,value) {
-//                    bannerHtmlStr = bannerHtmlStr +  " <img src=\""+value.picUrl+"\"  />";
-//                });
-//                $("div[class=banner]").append(bannerHtmlStr);
-
                 $.ajax({
                     type: "GET",
                     dataType: "json",
@@ -501,18 +489,6 @@
             }
 
             function getNewsData() {
-
-//                var params = "[{\"sid\":1,\"picUrl\":\"http://p0.so.qhmsg.com/bdr/_240_/t01f1fdf0d724293e25.jpg\",\"picSort\":1},{\"sid\":2,\"picUrl\":\"http://p1.so.qhmsg.com/bdr/_240_/t01555ea91ad55c9af6.jpg\",\"picSort\":2},{\"sid\":3,\"picUrl\":\"http://p1.so.qhimgs1.com/bdr/_240_/t01cd4ba7aa4e636c6d.jpg\",\"picSort\":3},{\"sid\":4,\"picUrl\":\"http://p2.so.qhimgs1.com/bdr/_240_/t014d198acf3392d572.png\",\"picSort\":4},{\"sid\":5,\"picUrl\":\"http://p1.so.qhimgs1.com/bdr/_240_/t015089b186e1d83d8d.jpg\",\"picSort\":5}]"
-//                var obj = eval("("+params+")");
-//                var newsSmallHtmlStr = "";
-//                $.each(obj,function(name,value) {
-//                    if("7" == value.newSort){
-//                        newsSmallHtmlStr = newsSmallHtmlStr +"<div class=\"news height_news\"><div class=\"news_bg\"><div><h5>"+value.titleCn+"</h5><a class=\"link1\" href=\""+value.fullArticle+"\">Full article</a><a class=\"link2\" href=\""+value.website+"\">Website</a><p>"+value.contentCn+"</p></div></div></div>";
-//                    }else{
-//                        newsSmallHtmlStr = newsSmallHtmlStr + "<div class=\"news\"><div class=\"news_bg\"><div><h5>"+value.titleCn+"</h5><a class=\"link1\" href=\""+value.fullArticle+"\">Full article</a><a class=\"link2\" href=\""+value.website+"\">Website</a><p>"+value.contentCn+"</p></div></div></div>";
-//                    }
-//                });
-
                 $.ajax({
                     type: "GET",
                     dataType: "json",
@@ -554,50 +530,6 @@
                         }
                     }
                 });
-
-
-
-
-<%--$.ajax({--%>
-                    <%--type: "GET",--%>
-                    <%--dataType: "json",--%>
-                    <%--url: '/submitCryptocurrency',--%>
-                    <%--data:params,--%>
-                    <%--success: function (result) {--%>
-                        <%--if(undefined == result){--%>
-                            <%--alert("服务异常，请稍后再试");--%>
-                        <%--}else{--%>
-                            <%--var data = jQuery.parseJSON(result);--%>
-                            <%--if (data.code != 0) {--%>
-                                <%--alert("服务异常，请稍后再试");--%>
-                            <%--} else {--%>
-                                <%--var newsSmallHtmlStr =--%>
-                                    <%--"<div class=\"news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";--%>
-                                <%--// 先获取 中英文标识--%>
-                                <%--var CNBTNVAL = $("#CNBtn").attr("data_val");--%>
-                                <%--var ENBTNVAL = $("#ENBtn").attr("data_val");--%>
-                                <%--if("1" == CNBTNVAL){--%>
-                                    <%--jQuery.each(result, function(i, val) {--%>
-                                        <%--if("7" == val.newSort){--%>
-                                            <%--newsSmallHtmlStr = newsSmallHtmlStr +"<div class=\"news height_news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";--%>
-                                        <%--}else{--%>
-                                            <%--newsSmallHtmlStr = newsSmallHtmlStr + "<div class=\"news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";--%>
-                                        <%--}--%>
-                                    <%--});--%>
-                                <%--}--%>
-                                <%--if("1" == ENBTNVAL){--%>
-                                    <%--jQuery.each(result, function(i, val) {--%>
-                                        <%--if("7" == val.newSort){--%>
-                                            <%--newsSmallHtmlStr = newsSmallHtmlStr +"<div class=\"news height_news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";--%>
-                                        <%--}else{--%>
-                                            <%--newsSmallHtmlStr = newsSmallHtmlStr + "<div class=\"news\"><div class=\"news_bg\"><div><h5>${news.titleCn}</h5><a class=\"link1\" href=\"${news.fullArticle}\">Full article</a><a class=\"link2\" href=\"${news.website}\">Website</a><p>${news.contentCn}</p></div></div></div>";--%>
-                                        <%--}                                    });--%>
-                                <%--}--%>
-                                <%--$("div[class=content_left]").append(newsSmallHtmlStr);--%>
-                            <%--}--%>
-                        <%--}--%>
-                    <%--}--%>
-                <%--});--%>
             }
 
             getBannerData();
